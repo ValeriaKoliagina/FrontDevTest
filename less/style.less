@@ -1,0 +1,376 @@
+@blue: #165eb9;
+@yellow: rgb(255, 230, 55);
+@black: rgb(83, 82, 83);
+@white: #ffffff;
+@pink: rgb(211, 167, 172);
+@brown: #aa9b77;
+@light-blue: rgb(245, 246, 247);
+@grey: #dbdbdb;
+
+
+@font-face {
+    font-family: "Quicksand-Bold";
+    src:
+        local("Quicksand-Bold"),
+        url("/fonts/quicksand-bold-webfont.woff") format("woff");
+}
+
+.text() {
+	font-family: "Quicksand-Bold", sans-serif;
+	text-transform: uppercase;
+}
+
+.content() {
+	content: "";
+	display: inline-block;
+}
+
+.border-style() {
+	border-top-style: none;
+	border-right-style: none;
+}
+
+.text-size(@size: 11px) {
+    font-size: @size;
+}
+
+.title() {
+	.text-size(14px);
+	display: block;
+	margin-top: -10px;
+	background: @white;
+	width: 70px;
+}
+
+.common(@margin) {
+	margin: @margin 0;
+	border-top: 2px solid @grey;
+	position: relative;
+}
+
+.for_pages (@margin; @align){
+	display: block;
+	color: @brown;
+	margin-top: @margin;
+	text-align: @align;
+}
+
+.for_link (@align) {
+	display: block;
+	text-align: @align;
+}
+
+.for_a() {
+	color: @brown;
+	text-decoration: none;
+}
+
+html,
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+	.text;
+    .text-size;
+    padding: 0 70px;
+	max-width: 960px;
+	box-sizing: border-box;
+}
+
+.google {
+	display: block;
+	text-align: center;
+}
+
+select {
+	.text;
+	.text-size(12px);
+    appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: none;
+}
+
+.page-header {
+	background: @light-blue;
+	position: relative;
+	margin: 0 -70px;
+	.text-size(12px);
+	
+	a {
+		color: @black;
+		text-decoration: none;
+		display: inline-block;
+		margin: 50px 70px; 
+	
+		&::before {
+			.content;
+			width: 5px;
+			height: 5px;
+			border: 1px solid @black;
+			.border-style;
+			transform: rotate(45deg);
+			margin-right: 20px;
+			margin-bottom: 2px;
+		}	
+	}
+}
+label {
+	position: relative;
+}
+
+input[type="checkbox"] {
+	display: none;
+	
+	&~ label{
+		&::before {
+			.content;
+			width: 13px;
+			height: 13px;
+			vertical-align: middle;
+			border: 2px solid @grey;
+			margin: 50px 15px;
+			border-radius: 3px;
+			background-color: @white;
+		}
+	
+		&::after {
+			.content;
+		}	
+	}
+	&:checked + label {
+		&::before {border-color: @brown;}
+		&::after {
+			width: 8px;
+			height: 3px;
+			border: 3px solid @brown;
+			.border-style;
+			transform: rotate(-45deg);
+			position: absolute;
+			left: 18px;
+			top: 4px;
+		}
+	}
+	&:first-of-type {
+		&:checked + label::after {
+			left: 73px;
+		}
+		& + label::before {
+			margin-left: 70px;
+		}
+	}
+}
+
+input[type="reset"] {
+	background: @brown;
+	color: @white;
+	padding: 15px 25px;
+	.text;
+	.text-size;
+	border: none;
+	border-radius: 4px;
+	position: absolute;
+	right: 70px;
+	top: calc(50% - 21px);
+}
+
+.sort {
+	margin: 20px 0;
+	.text-size(14px);
+}
+
+#sort {
+	margin-left: 10px;
+	.text-size;
+	background: @light-blue url('/img/tick.png') no-repeat center right;
+	padding-right: 12px;
+}
+
+.men {
+	.common(40px);
+
+	.higher {
+		.title;
+	}
+
+	.pages {
+		.for_pages(40px; right);
+	}	
+	
+	.link {
+		.for_link(right);
+	
+		a {
+			.for_a;
+		}
+	}	
+	
+	.t-shirt {
+		border: 4px solid @brown;
+		margin: 75px 0;
+		border-radius: 4px;
+		width: 100%;
+		height: 100%;
+		flex-direction: row;
+		padding: 5px;
+
+		img {
+			width: 570px;
+		}
+	}
+}
+
+.women {
+	.common(75px);
+
+	.higher {
+		.title;
+		position: absolute;
+		right: 0;
+		text-align: right;
+	}
+	
+	.pages {
+		.for_pages(50px; left);
+	}
+
+	.link {
+		.for_link(left);
+	
+		a {
+			.for_a;
+		}
+	}	
+}
+
+
+.all_goods {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
+.goods {
+	background: @light-blue;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 240px; 
+	height: 285px;
+	padding: 20px 12px;
+	border: 5px solid @light-blue;
+	box-sizing: border-box;
+
+	.align {
+		display: flex;
+		justify-content: space-between;
+		
+		span {
+			.text-size(13px);
+		}
+		
+		.name {
+			color: @brown;
+		}
+	}	
+	
+	&:hover {
+		border-color: @brown;
+	}
+}
+
+select[name="size"] {
+	border: none;
+	.text;
+	background: @light-blue url('/img/tick.png') no-repeat center right;
+	padding-right: 12px;
+}
+
+.select-box {
+	display: inline-block;
+} 
+
+input[type="radio"] {
+	display: none;
+
+	&~ label::before {
+		.content;
+		width: 10px;
+		height: 10px;
+		vertical-align: middle;
+		border: 3px solid @blue;
+		background-color: @blue;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+}
+
+#radio-2 + label::before {
+	border-color: @yellow;
+    background-color: @yellow;
+}
+#radio-3 + label::before {
+	border-color: @black;
+    background-color: @black;
+}
+#radio-4 + label::before {
+	border-color: @pink;
+    background-color: @pink;
+}
+#radio-5 + label::before {
+	border-color: @white;
+    background-color: @white;
+}
+
+.bottom {
+	margin-bottom: 70px;
+}
+
+.left {
+	text-align: left;
+}
+
+table {
+	border-collapse: collapse;
+	margin-right: 70px;
+	margin-top: 65px;
+	.text-size(16px);
+}
+
+td {
+	padding: 10px 15px;
+	text-align: right;
+}
+
+
+@media (max-width: 900px) {
+	body {
+		max-width: 576px;
+	
+		.all_goods {
+			flex-direction: column;
+		
+			.goods {
+			margin: 10px auto;
+			}
+		}
+		
+		.page-header {
+			padding-bottom: 20px;
+		
+			input[type="reset"] {
+			width: 80%;
+			position: initial;
+			display: block;
+			margin: 0 auto;
+			margin-top: -30px;
+			}
+		}
+	}
+}
+
+	
+
+

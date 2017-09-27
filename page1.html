@@ -1,0 +1,177 @@
+<!Doctype HTML>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<link rel="stylesheet/less" type="text/css" href="less/style.less">
+			<script src="js/less.min.js" type="text/javascript"></script>
+		</head>
+		<body>
+			<a class="google" href="http://google.com"><img src="img/google.png"/></a>
+			<form action="#" method="get">
+				<div class="page-header">
+					<input type="checkbox" name="men" id="men" checked/>
+					<label for="men">Men</label>
+					<input type="checkbox" name="women" id="women" checked/>
+					<label for="women">Women</label>
+					<input type="checkbox" name="men" id="children" checked/>
+					<label for="children">Children</label>
+					<input type="reset" value="See all products"/>
+				</div>
+			</form>
+			<div class="sort">
+				<label for="sort">Sort by</label>
+				<div class="select-box">
+					<select name="sort" id="sort">
+						<option>None</option>
+						<option>Price</option>
+						<option>Name</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="men">
+				<span class="higher">Men</span> 
+				<span class="pages">1 / 5</span>
+				<span class="link">
+					<a href="#">&lt;</a>
+					<a href="#">&gt;</a>
+				</span>
+				<div class="all_goods">
+					<div class="goods" data-number="1">
+						<div class="align">
+							<div>
+								<form action="#" method="get">
+									<div class="select-box">
+										<select name="size">
+												<option selected>Size</option>
+												<option>XL</option>
+												<option>L</option>
+											</select>
+										</div>
+								</div>
+								<div>
+									<input type="radio" name="color" value="blue" id="radio-1"/>
+									<label for="radio-1"></label>
+									<input type="radio" name="color" value="yellow" id="radio-2"/>
+									<label for="radio-2"></label>
+									<input type="radio" name="color" value="black" id="radio-3"/>
+									<label for="radio-3"></label>
+								</div>
+							</form>
+						</div>
+						<a href="page2.html"><img src="img/t-shirt.png"/></a>
+						<div class="align">
+							<span class="name">T-shirt</span>
+							<span class="price">5,00&euro;</span>
+						</div>
+					</div>
+					<div class="goods" data-number="2">
+						<div class="align">
+							<form action="#" method="get">
+								<div class="select-box">
+									<select name="size">
+										<option selected>Size</option>
+										<option>S</option>
+										<option>M</option>
+										<option>L</option>
+									</select>
+								</div>
+							</form>
+						</div>	
+						<a href="#"><img src="img/pants.png"/></a>
+						<div class="align">
+							<span class="name">Pants forclaz</span>
+							<span class="price">30,00&euro;</span>
+						</div>
+					</div>
+					<div class="goods" data-number="3">
+						<div class="align">
+							<span>10Litri</span>
+						</div>
+						<a href="#"><img src="img/backpack.png"/></a>
+						<div class="align">
+							<span class="name">Backpack</span>
+							<span class="price">60,00&euro;</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="women">
+				<span class="higher">Women</span> 
+				<span class="pages">1 / 5</span>
+				<span class="link">
+					<a href="#">&lt;</a>
+					<a href="#">&gt;</a>
+				</span>
+				<div class="all_goods">
+					<div class="goods" data-number="1">
+						<div class="align">
+							<form action="#" method="get">
+								<div class="select-box">
+									<select name="size">
+										<option selected>Size</option>
+										<option>S</option>
+										<option>M</option>
+										<option>L</option>
+									</select>
+								</div>
+							</form>
+						</div>
+						<a href="#"><img src="img/giacket.png"/></a>
+						<div class="align">
+							<span class="name">Giacket</span>
+							<span class="price">60,00&euro;</span>
+						</div>
+					</div>
+					<div class="goods" data-number="2">
+						<div class="align">
+							<form action="#" method="get">
+								<div class="select-box">
+									<select name="size">
+										<option selected>Size</option>
+										<option>37</option>
+										<option>38</option>
+										<option>39</option>
+									</select>
+								</div>	
+							</form>
+						</div>
+						<a href="#"><img src="img/shoes.png"/></a>
+						<div class="align">
+							<span class="name">Trekking shoes</span>
+							<span class="price">80,00&euro;</span>
+						</div>
+					</div>
+					<div class="goods" data-number="3">
+						<div class="align">
+							<div>
+								<form action="#" method="get">
+									<div class="select-box">
+										<select name="size">
+											<option selected>Size</option>
+											<option>S</option>
+											<option>M</option>
+											<option>L</option>
+										</select>
+									</div>
+								</div>
+								<div>
+									<input type="radio" name="color" value="pink" id="radio-4"/>
+									<label for="radio-4"></label>
+									<input type="radio" name="color" value="white" id="radio-5"/>
+									<label for="radio-5"></label>
+								</div>
+							</form>
+						</div>
+						<a href="#"><img src="img/t-shirt2.png"/></a>
+						<div class="align">
+							<span class="name">T-shirt</span>
+							<span class="price">20,00&euro;</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="js/script.js"></script>
+		</body>
+	</html>
